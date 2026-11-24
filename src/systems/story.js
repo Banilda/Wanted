@@ -1,0 +1,1 @@
+import story from '../data/story.json';import {state,save} from '../state.js';export function pending(){return story.find(s=>state.money.banked>=s.threshold&&!state.storyShown.includes(s.threshold))}export function mark(threshold){state.storyShown.push(threshold);save()}
